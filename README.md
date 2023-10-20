@@ -10,3 +10,5 @@ Note of reading book - Elements of Programming Interviews in Java
 #### Concrete Problems
 
 [Computing the Parity of a Word](./problems/primitive_types/ComputingParityOfWord.java)
+
+[Swap Bits](./problems/primitive_types/SwapBits.java)
