@@ -14,3 +14,5 @@ Note of reading book - Elements of Programming Interviews in Java
 [Swap Bits](./problems/primitive_types/SwapBits.java)
 
 [Reverse Bits](./problems/primitive_types/ReverseBits.java)
+
+[Find a Close Integer with the Same Weight](./problems/primitive_types/FindCloseIntegerWithSameWeight.java)
