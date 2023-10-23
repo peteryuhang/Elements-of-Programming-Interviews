@@ -20,3 +20,5 @@ Note of reading book - Elements of Programming Interviews in Java
 [Compute x X y Without Arithmetical Operators](./problems/primitive_types/ComputeXxYWithoutArithmeticalOperators.java)
 
 [Compute x / y](./problems/primitive_types/ComputeXDividedY.java)
+
+[Compute x^y](./problems/primitive_types/ComputeXPowerOfY.java)
