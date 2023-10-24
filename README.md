@@ -24,3 +24,5 @@ Note of reading book - Elements of Programming Interviews in Java
 [Compute x^y](./problems/primitive_types/ComputeXPowerOfY.java)
 
 [Reverse Digits](./problems/primitive_types/ReverseDigits.java)
+
+[Check If A Decimal Integer Is A Palindrome](./problems/primitive_types/CheckIfADecimalIntegerIsAPalindrome.java)
