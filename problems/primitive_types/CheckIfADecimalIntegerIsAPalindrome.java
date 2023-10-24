@@ -9,7 +9,7 @@
  * as a decimal string is a palindrome.
  */
 public class CheckIfADecimalIntegerIsAPalindrome {
-  // convert to string
+  // convert to string, O(n) time, O(n) space
   public static boolean check(long x) {
     String xStr = Long.toString(x);
 
@@ -21,7 +21,7 @@ public class CheckIfADecimalIntegerIsAPalindrome {
     return true;
   }
 
-  // without convertion
+  // without convertion, O(n) time, O(1) spaces
   public static boolean checkDirectly(long x) {
     if (x < 0) { return false; }
 
