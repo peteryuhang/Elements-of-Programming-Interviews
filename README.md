@@ -22,3 +22,5 @@ Note of reading book - Elements of Programming Interviews in Java
 [Compute x / y](./problems/primitive_types/ComputeXDividedY.java)
 
 [Compute x^y](./problems/primitive_types/ComputeXPowerOfY.java)
+
+[Reverse Digits](./problems/primitive_types/ReverseDigits.java)
