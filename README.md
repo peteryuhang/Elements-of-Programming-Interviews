@@ -26,3 +26,5 @@ Note of reading book - Elements of Programming Interviews in Java
 [Reverse Digits](./problems/primitive_types/ReverseDigits.java)
 
 [Check If A Decimal Integer Is A Palindrome](./problems/primitive_types/CheckIfADecimalIntegerIsAPalindrome.java)
+
+[Generate Uniform Random Number](./problems/primitive_types/GenerateUniformRandomNumber.java)
