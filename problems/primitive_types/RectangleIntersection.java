@@ -1,4 +1,4 @@
-
+import java.util.HashSet;
 /* 
  * This problem is concerned with rectangles whose sides are parallel to
  * the X-axis and Y-axis. 
@@ -37,11 +37,48 @@ public class RectangleIntersection {
     return new Rectangle(-1, -1, -1, -1);
   }
 
+  /* 
+   * Variant: Given four points in the plane, how would you check if they are the
+   * vertices of a rectangle?
+   */
+  public static boolean isRec(int[] a, int[] b, int[] c, int[] d) {
+    HashSet<String> set = new HashSet<>();
+    set.add(a[0]+","+a[1]);
+    set.add(b[0]+","+b[1]);
+    set.add(c[0]+","+c[1]);
+    set.add(d[0]+","+d[1]);
+
+    // left bottom
+    int[] lb = new int[]{
+      Math.min( Math.min(a[0], b[0]), Math.min(c[0], d[0]) ),
+      Math.min( Math.min(a[1], b[1]), Math.min(c[1], d[1]) )
+    };
+
+    // right top
+    int[] rt = new int[]{
+      Math.max( Math.max(a[0], b[0]), Math.max(c[0], d[0]) ),
+      Math.max( Math.max(a[1], b[1]), Math.max(c[1], d[1]) )
+    };
+    return set.contains(lb[0]+","+lb[1])
+          && set.contains(rt[0]+","+rt[1])
+          && set.contains(lb[0]+","+rt[1])
+          && set.contains(rt[0]+","+lb[1]);
+  }
+
   public static void main(String[] args) {
     System.out.println(
       intersect(
         new Rectangle(0, 0, 5, 5),
         new Rectangle(2, 2, 7, 8)
+      )
+    );
+
+    System.out.println(
+      isRec(
+        new int[]{0,0},
+        new int[]{5,5},
+        new int[]{0,1},
+        new int[]{5,0}
       )
     );
   }
