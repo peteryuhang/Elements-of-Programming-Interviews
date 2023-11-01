@@ -32,3 +32,7 @@ Note of reading book - Elements of Programming Interviews in Java
 [Rectangle Intersection](./problems/primitive_types/RectangleIntersection.java)
 
 ### [Arrays](./problems/arrays/ch6.md)
+
+#### Concrete Problems
+
+[The Dutch National Flag Problem](./problems/arrays/DutchNationalFlagProblem.java)
