@@ -53,6 +53,24 @@ public class DutchNationalFlagProblem {
     arr[j] = tmp;
   }
 
+  /* 
+   * Assuming that keys take one of three values, reorder the array so that all objects with
+   * the same key appear together. The order of the subarrays is not important.
+   */
+  public static void variant1(int[] arr) {      // assuming the three values are 0, 1, 2
+    for (int l = 0, e = 0, r = arr.length - 1; e < r;) {
+      if (arr[e] == 0) {
+        swap(arr, e, l);
+        l++; e++;
+      } else if (arr[e] == 1) {
+        e++;
+      } else {
+        swap(arr, e, r);
+        r--;
+      }
+    }
+  }
+
   public static void main(String[] args) {
     int[] arr1 = new int[]{0,1,2,0,2,1,1};
     partitioned(arr1,3);
@@ -65,6 +83,14 @@ public class DutchNationalFlagProblem {
     int[] arr2 = new int[]{0,1,2,0,2,1,1};
     partitioned(arr2,2);
     for (int e : arr2) {
+      System.out.println(e);
+    }
+
+    System.out.println("=====================");
+
+    int[] arr3 = new int[]{0,1,2,0,2,1,1};
+    variant1(arr3);
+    for (int e : arr3) {
       System.out.println(e);
     }
   }
