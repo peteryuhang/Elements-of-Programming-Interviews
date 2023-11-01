@@ -34,7 +34,7 @@ public class DutchNationalFlagProblem {
   public static void partitionedOnePass(int[] arr, int i) {
     int pivot = arr[i];
 
-    for (int l = 0, e = 0, r = arr.length - 1; e < r;) {
+    for (int l = 0, e = 0, r = arr.length - 1; e <= r;) {
       if (arr[e] < pivot) {
         swap(arr, e, l);
         l++; e++;
@@ -71,6 +71,32 @@ public class DutchNationalFlagProblem {
     }
   }
 
+  /* 
+   * Given an array A of n objects with keys that takes one of four values, reorder the array
+   * so that all objects that have the same key appear together. Use O(1) additional space and
+   * O(n) time
+   */
+  public static void variant2(int[] arr) {    // assuming the three values are 0, 1, 2, 3
+    int p = variant2Helper(arr, 0, arr.length - 1, 1);
+    variant2Helper(arr, p, arr.length - 1, 2);
+  }
+
+  private static int variant2Helper(int[] arr, int i, int j, int pivot) {
+    int l = i, e = i, r = j;
+    for (; e <= r;) {
+      if (arr[e] < pivot) {
+        swap(arr, e, l);
+        l++; e++;
+      } else if (arr[e] == pivot) {
+        e++;
+      } else {
+        swap(arr, e, r);
+        r--;
+      }
+    }
+    return e;
+  }
+
   public static void main(String[] args) {
     int[] arr1 = new int[]{0,1,2,0,2,1,1};
     partitioned(arr1,3);
@@ -91,6 +117,14 @@ public class DutchNationalFlagProblem {
     int[] arr3 = new int[]{0,1,2,0,2,1,1};
     variant1(arr3);
     for (int e : arr3) {
+      System.out.println(e);
+    }
+
+    System.out.println("=====================");
+
+    int[] arr4 = new int[]{0,2,3,1,2,3,0,2,1,0,3,1};
+    variant2(arr4);
+    for (int e : arr4) {
       System.out.println(e);
     }
   }
