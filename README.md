@@ -5,7 +5,7 @@ Note of reading book - Elements of Programming Interviews in Java
 
 ## Section II: Problems
 
-### [Primitive Types](./problems/primitive_types/ch4.md)
+### [Primitive Types](./problems/primitive_types/ch5.md)
 
 #### Concrete Problems
 
@@ -30,3 +30,5 @@ Note of reading book - Elements of Programming Interviews in Java
 [Generate Uniform Random Number](./problems/primitive_types/GenerateUniformRandomNumber.java)
 
 [Rectangle Intersection](./problems/primitive_types/RectangleIntersection.java)
+
+### [Arrays](./problems/arrays/ch6.md)

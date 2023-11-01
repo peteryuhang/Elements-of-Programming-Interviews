@@ -38,7 +38,7 @@ public class RectangleIntersection {
   }
 
   /* 
-   * Variant: Given four points in the plane, how would you check if they are the
+   * Variant 1: Given four points in the plane, how would you check if they are the
    * vertices of a rectangle?
    */
   public static boolean isRec(int[] a, int[] b, int[] c, int[] d) {
@@ -63,6 +63,14 @@ public class RectangleIntersection {
           && set.contains(rt[0]+","+rt[1])
           && set.contains(lb[0]+","+rt[1])
           && set.contains(rt[0]+","+lb[1]);
+  }
+
+  /* 
+   * Variant 2: How would you check if two rectangles, not necessarily aligned
+   * with the X and Y axes, intersect?
+   * */
+  public static boolean intersect2(Rectangle recA, Rectangle recB) {
+    
   }
 
   public static void main(String[] args) {
