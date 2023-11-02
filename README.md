@@ -36,3 +36,5 @@ Note of reading book - Elements of Programming Interviews in Java
 #### Concrete Problems
 
 [The Dutch National Flag Problem](./problems/arrays/DutchNationalFlagProblem.java)
+
+[Increment An Arbitrary-Precision Integer](./problems/arrays/IncrementAnArbitraryPrecisionInt.java)
