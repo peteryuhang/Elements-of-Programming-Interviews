@@ -53,6 +53,12 @@ public class DutchNationalFlagProblem {
     arr[j] = tmp;
   }
 
+  public static void swap(boolean[] arr, int i, int j) {
+    boolean tmp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = tmp;
+  }
+
   /* 
    * Assuming that keys take one of three values, reorder the array so that all objects with
    * the same key appear together. The order of the subarrays is not important.
@@ -97,6 +103,20 @@ public class DutchNationalFlagProblem {
     return e;
   }
 
+  /* 
+   * Given an array A of n objects with Boolean-valued keys, reorder the array so that objects
+   * that have the key false appear first. Use 0(1) additional space and 0(n) time.
+   */
+  public static void variant3(boolean[] arr) {
+    for (int i = 0, j = arr.length - 1; i < j;) {
+      if (arr[j] == false) {
+        swap(arr, i++, j);
+      } else {
+        j--;
+      }
+    }
+  }
+
   public static void main(String[] args) {
     int[] arr1 = new int[]{0,1,2,0,2,1,1};
     partitioned(arr1,3);
@@ -125,6 +145,14 @@ public class DutchNationalFlagProblem {
     int[] arr4 = new int[]{0,2,3,1,2,3,0,2,1,0,3,1};
     variant2(arr4);
     for (int e : arr4) {
+      System.out.println(e);
+    }
+
+    System.out.println("=====================");
+
+    boolean[] arr5 = new boolean[]{true,false,true,false,false,true,false,true,true,false,false,true};
+    variant3(arr5);
+    for (boolean e : arr5) {
       System.out.println(e);
     }
   }
