@@ -105,12 +105,32 @@ public class DutchNationalFlagProblem {
 
   /* 
    * Given an array A of n objects with Boolean-valued keys, reorder the array so that objects
-   * that have the key false appear first. Use 0(1) additional space and 0(n) time.
+   * that have the key false appear first. Use O(1) additional space and O(n) time.
    */
   public static void variant3(boolean[] arr) {
     for (int i = 0, j = arr.length - 1; i < j;) {
       if (arr[j] == false) {
         swap(arr, i++, j);
+      } else {
+        j--;
+      }
+    }
+  }
+
+  /* 
+   * Given an array A of n objects with Boolean-valued keys, reorder the array so that objects
+   * that have the key false appear first. The relative ordering of objects with key true should
+   * not change. Use O(1) additional space and O(n) time.
+   * F F F T F F T
+   * T T T F T T F
+   * T T T F T T T
+   */
+  public static void variant4(boolean[] arr) {
+    for (int i = arr.length - 1, j = arr.length - 1; j >= 0 && i >= 0;) {
+      if (j < i && arr[j] == true && arr[i] == false) {
+        swap(arr, i--, j--);
+      } else if (arr[i] == true) {
+        i--;
       } else {
         j--;
       }
@@ -153,6 +173,38 @@ public class DutchNationalFlagProblem {
     boolean[] arr5 = new boolean[]{true,false,true,false,false,true,false,true,true,false,false,true};
     variant3(arr5);
     for (boolean e : arr5) {
+      System.out.println(e);
+    }
+
+    System.out.println("=====================");
+
+    boolean[] arr6 = new boolean[]{true,false,true,false,false,true,false,true,true,false,false,true};
+    variant4(arr6);
+    for (boolean e : arr6) {
+      System.out.println(e);
+    }
+
+    System.out.println("=====================");
+
+    boolean[] arr7 = new boolean[]{false,false,false,true,false,false,true};
+    variant4(arr7);
+    for (boolean e : arr7) {
+      System.out.println(e);
+    }
+
+    System.out.println("=====================");
+
+    boolean[] arr8 = new boolean[]{true,true,true,false,true,true,false};
+    variant4(arr8);
+    for (boolean e : arr8) {
+      System.out.println(e);
+    }
+
+    System.out.println("=====================");
+
+    boolean[] arr9 = new boolean[]{true,true,true,false,true,true,true};
+    variant4(arr9);
+    for (boolean e : arr9) {
       System.out.println(e);
     }
   }
