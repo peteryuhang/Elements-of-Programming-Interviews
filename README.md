@@ -38,3 +38,5 @@ Note of reading book - Elements of Programming Interviews in Java
 [The Dutch National Flag Problem](./problems/arrays/DutchNationalFlagProblem.java)
 
 [Increment An Arbitrary-Precision Integer](./problems/arrays/IncrementAnArbitraryPrecisionInt.java)
+
+[Multiply Two Arbitrary-precision Integers](./problems/arrays/MultiplyIntegers.java)
